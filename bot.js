@@ -718,4 +718,4 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 }
 });
  
-client1.login(process.env.BOT_TOKEN);
+client1.login(process.env.BOT_TOKEN2);
