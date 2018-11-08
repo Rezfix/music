@@ -361,7 +361,7 @@ client.login(process.env.BOT_TOKEN);
  
 /////////////////////////
 ////////////////////////
-var prefix = '$';
+var prefix = '2';
 client1.on('message', async msg =>{
     if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
