@@ -361,8 +361,9 @@ client.login(process.env.BOT_TOKEN);
 
 /////////////////////////
 ////////////////////////
+
 clientt.on('message', async msg =>{
- var prefix = "3";
+ 
     if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
    
