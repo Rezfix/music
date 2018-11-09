@@ -359,10 +359,9 @@ if (message.content.startsWith(adminprefix + 'setT')) {
  
 client.login(process.env.BOT_TOKEN);
 
-const prefix = "2";
 /////////////////////////
 ////////////////////////
- 
+ var prefix = "3";
 clientt.on('message', async msg =>{
     if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
