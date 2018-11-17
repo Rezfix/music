@@ -303,7 +303,7 @@ function play(guild, song) {
  
  
 client.on('message', message => {
-   if (message.content === '!help') {
+   if (message.content === '1help') {
        let helpEmbed = new Discord.RichEmbed()
        .setTitle('**أوامر الميوزك...**')
        .setDescription('**برفكس البوت (!)**')
@@ -360,7 +360,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 client.on('ready',async () => {
 console.log("Starting..");
 let g = client.guilds.get("493237177170395155");
-let c = g.channels.get("510531250277056513");
+let c = g.channels.get("513071426144829487");
 if(c.type === 'voice') {
 c.join();
 setInterval(() => {
