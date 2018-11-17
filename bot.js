@@ -9,6 +9,13 @@ const ytdl = require('ytdl-core');
 const fs = require('fs');
 const gif = require("gif-search");
 const client = new Discord.Client({disableEveryone: true});
+
+client.on('ready', () => {
+    client.user.setGame('Type 1help','https://www.twitch.tv/RezfixServer');
+    console.log('---------------');
+    console.log('1play Online')
+    console.log('---------------')
+  });
  
 const prefix = "1";
 /////////////////////////
