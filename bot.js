@@ -13,7 +13,7 @@ const client = new Discord.Client({disableEveryone: true});
 client.on('ready',  () => {
 console.log('------------------------------------');
 console.log(' ,');
-console.log('Servers | " ${client.guilds.size} " |`); 
+console.log(`Servers | " ${client.guilds.size} " |`); 
 console.log(`Users | " ${client.users.size} " |`); 
 console.log('Bot By BLUTICK.#0001 ,');
 console.log('For Tune Music ,');
