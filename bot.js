@@ -11,9 +11,14 @@ const gif = require("gif-search");
 const client = new Discord.Client({disableEveryone: true});
 
 client.on('ready',  () => {
-console.log('We Are Top ,');
-console.log(`servers! [ " ${client.guilds.size} " ] Users! [ " ${client.users.size} " ]`); 
-
+console.log('------------------------------------');
+console.log(' ,');
+console.log('OnlyServers! | " ${client.guilds.size} " |`); 
+console.log(`Users | " ${client.users.size} " |`); 
+console.log('Bot By BLUTICK.#0001 ,');
+console.log('For Tune Music ,');
+console.log('Nexta-Tune,');
+console.log('------------------------------------');
 });
 
 client.on('ready', function(){
