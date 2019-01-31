@@ -386,19 +386,5 @@ if (message.content.startsWith(adminprefix + 'setT')) {
    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)//حقوق دايموند كودز
 }
 });
- 
-client.on('ready',async () => {
-console.log("Starting..");
-let g = client.guilds.get("540171973490245642");
-let c = g.channels.get("540155995796668434");
-if(c.type === 'voice') {
-c.join();
-setInterval(() => {
-if(!g.me.voiceChannel) c.join();
-}, 1);
-} else {
-console.log("Failed To Join:\n The Channel Type isn't \"text\"");
-}
-});
 
 client.login(process.env.BOT_TOKEN);
