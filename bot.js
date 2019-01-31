@@ -10,12 +10,30 @@ const fs = require('fs');
 const gif = require("gif-search");
 const client = new Discord.Client({disableEveryone: true});
 
-client.on('ready', () => {
-    client.user.setGame('Type 1help','https://www.twitch.tv/RezfixServer');
-    console.log('---------------');
-    console.log('1play Online')
-    console.log('---------------')
-  });
+client.on('ready',  () => {
+console.log('We Are Top ,');
+console.log(`servers! [ " ${client.guilds.size} " ] Users! [ " ${client.users.size} " ]`); 
+
+});
+
+client.on('ready', function(){
+    client.user.setStatus("dnd");
+    var ms = 100000 ;
+    var setGame = [`Type 1play | https://Tune`];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`https://www.twitch.tv/Tune`);
+    }, ms);100000
+
+});
  
 const prefix = "1";
 /////////////////////////
