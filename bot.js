@@ -13,7 +13,7 @@ const client = new Discord.Client({disableEveryone: true});
 client.on('ready',  () => {
 console.log('------------------------------------');
 console.log(' ,');
-console.log('OnlyServers! | " ${client.guilds.size} " |`); 
+console.log('OnlyServers | " ${client.guilds.size} " |`); 
 console.log(`Users | " ${client.users.size} " |`); 
 console.log('Bot By BLUTICK.#0001 ,');
 console.log('For Tune Music ,');
@@ -386,5 +386,20 @@ if (message.content.startsWith(adminprefix + 'setT')) {
    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)//حقوق دايموند كودز
 }
 });
+
+client.on('message', msg => {
+
+    if (msg.content == '1join') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('white_check_mark'));
+     }
+    }
+}
+})
+client.on('ready', () => {
+    client.channels.get("540171973490245642").join(); 
+    });
 
 client.login(process.env.BOT_TOKEN);
