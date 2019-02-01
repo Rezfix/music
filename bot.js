@@ -19,6 +19,7 @@ console.log('Bot By BLUTICK.#0001 ,');
 console.log('For Tune Music ,');
 console.log('Nexta-Tune,');
 console.log('------------------------------------');
+client.user.setGame('Type Sounds','https://www.twitch.tv/Tune');
 });
 
 client.on('ready',async () => {
