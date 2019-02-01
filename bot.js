@@ -24,7 +24,7 @@ client.user.setGame('Type Sounds','https://www.twitch.tv/Tune');
 
 client.on('ready',async () => {
 console.log("Starting..");
-let g = client.guilds.get("540155995796668434");
+let g = client.guilds.get("540170349065535518");
 let c = g.channels.get("540171973490245642");
 if(c.type === 'voice') {
 c.join();
