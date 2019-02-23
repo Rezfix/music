@@ -5,23 +5,6 @@ const cool = [];
 const prefix = "!";
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('')
   console.log('╔[════════════]╗')
   console.log(' Bot Is Online')
   console.log('╚[════════════]╝')
@@ -100,5 +83,37 @@ client.on("message", message => {
    message.delete(); //@» MHSTR 🇮🇶#1119
   };     /// @» MHSTR 🇮🇶#1119
   }); ///@» MHSTR 🇮🇶#1119
+
+client.on('message', message => {
+  let argresult = message.content.split(``).slice(1).join(' ');
+  if (message.content.startsWith(prefix + 'setStreaming')) {
+    if (!devs.includes(message.author.id)) return message.channel.send("<@480407581085532180> only this guy can do restart the bot so don't try again 😉.");
+    message.delete();
+    client.user.setGame(argresult, 'https://twitch.tv/DynastyShop');
+
+  } else if(message.content.startsWith(prefix + 'setWatching')) {
+      client.user.setActivity(argresult,{type: 'WATCHING'});
+
+    } else if(message.content.startsWith(prefix + 'setListening')) {
+      client.user.setActivity(argresult,{type: 'LISTENING'});
+
+    } else if(message.content.startsWith(prefix + 'setPlaying')) {
+      client.user.setActivity(argresult,{type: 'PLAYING'});
+
+    } else if(message.content.startsWith(prefix + 'setName')) {
+      client.user.setUsername(argresult);
+
+    } else if(message.content.startsWith(prefix + 'setAvatar')) {
+      client.user.setAvatar(argresult);
+
+
+    } else if(message.content.startsWith(prefix + 'setStatus')) {
+      if(!argresult) return message.channel.send('online,DND(Do not Distrub),`idle, invisible(Offline) :notes: أختر أحد الحالات');
+      client.user.setStatus(argresult);
+
+
+  }
+
+});
 
 client.login(process.env.BOT_TOKEN);
