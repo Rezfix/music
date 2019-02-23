@@ -7,6 +7,8 @@ const prefix = "!";
 client.on('ready', () => {
   console.log('╔[════════════]╗')
   console.log(' Bot Is Online')
+  console.log('')
+  console.log('')
   console.log('╚[════════════]╝')
 });
 
