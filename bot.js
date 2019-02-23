@@ -31,7 +31,7 @@ client.on("message", message => {
     let args = message.content.split(" ").slice(1);
     var argresult = args.join(' '); // @» MHSTR 🇮🇶#1119
     message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
-   m.send(`${argresult}\n ${m}`); //@» MHSTR 🇮🇶#1119
+   m.send(`${argresult}\n`); //@» MHSTR 🇮🇶#1119
   }) ///@» MHSTR 🇮🇶#1119
    message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  عدد المستلمين `);
    message.delete(); //@» MHSTR 🇮🇶#1119
